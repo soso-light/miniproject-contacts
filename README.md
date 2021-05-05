@@ -16,11 +16,12 @@ Group 11
 19학번 최소미
  - 함수 이름 정의
  - 사용자에게 보여질 메뉴 목록 정하기
- - README.md file 1차 작성
+ - README.md file 작성
+ - 함수 readContact, listContact, selectMenu, saveContactData, loadContactData, searchNumber 구현
 
 
 20학번 조다빈
  - team peoject repo 제작
  - struct 요소 정의
  - wiki file 1차 작성
-
+ - 구조체 정의, 함수 createContact, updateContact, deleteContact, selectDataNumber, searchName 구현
