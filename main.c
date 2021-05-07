@@ -8,7 +8,7 @@ int main(void){
 	int count = 0, index=0, menu;
 	int no;
 
-	count = loadProductData(clist);
+	count = loadContactData(clist);
 	index = count;
 
 	while (1){
@@ -17,17 +17,17 @@ int main(void){
 
 		if (menu == 1){
 			if(count > 0)
-				listProduct(clist, index);
+				listContact(clist, index);
 			else
 				printf("메뉴가 없습니다.\n");
 		}
 		else if (menu == 2){
-			count += createProduct(&clist[index++]); 
+			count += createContact(&clist[index++]); 
 		}
 		else if (menu == 3){
 			no =  selectDataNumber(clist, index);
 			if(no>0)
-				updateProduct(&clist[no-1]);
+				updateContact(&clist[no-1]);
 			else {
 				printf("==>최소됨!!");
 				continue;
@@ -43,23 +43,21 @@ int main(void){
 				int delok;
 				scanf("%d",&delok);
 				if(delok==1){
-					int del = deleteProduct(&clist[no-1]);
+					int del = deleteContact(&clist[no-1]);
 					if( del == 1) printf("==> 삭제됨!\n");
 					count--;
 				}
 			}
 		}
 		else if(menu == 5){
-			saveProductData(clist, index);
+			saveContactData(clist, index);
 		}
 		else if(menu == 6){
-			searchProduct(clist,index);
+			searchName(clist,index);
 		}else if(menu == 7){
-			searchStar(clist,index);
-		}else if(menu == 8){
-			searchPrice(clist,index);
-		}
-	}
+			searchNumber(clist,index);
+	    }
+    }
 	printf("종료됨!\n");
 	return 0;
 }
