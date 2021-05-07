@@ -2,10 +2,10 @@
 
 
 int createContact(Contact *p){
-	print("이름은? ");
+	printf("이름은? ");
 	scanf("%s",p->name);
-	print("번호는? (- 입력하지 마시오)");
-	scanf("%s",p->number);
+	printf("번호는? (- 입력하지 마시오)");
+	scanf("%d",&p->number);
 	return 1;
 }
 
@@ -14,10 +14,10 @@ void readContact(Contact p){
 }
 
 int updateContact(Contact *p){
-	print("이름은? ");
+	printf("이름은? ");
 	scanf("%s",p->name);
-	print("번호는? ");
-	scanf("%s",p->number);
+	printf("번호는? ");
+	scanf("%d",&p->number);
 	printf("=> 수정됨!\n");
 	return 1;
 }
@@ -45,7 +45,7 @@ int selectMenu(){
 
 void searchName(Contact *p, int count){
 	int scnt = 0;
-	int search[20];
+	char search[20];
 
 	printf("검색할 이름? ");
 	scanf("%s", search);
