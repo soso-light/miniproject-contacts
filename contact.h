@@ -7,7 +7,7 @@
 
 typedef struct{
     char name[20];
-    int number;
+    int number;  //number[]로 해야하나요?
 }Contact;
 
 int createContact(Contact *p);
