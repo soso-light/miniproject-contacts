@@ -6,7 +6,7 @@ void listContact(Contact *p, int count){
 	for(int i =0; i <count ; i++){
 		if(p[i].number == -1) continue;
 		printf("%2d ", i+1);
-		readProduct(p[i]);
+		readContact(p[i]);
 	}
 	printf("\n");
 }
