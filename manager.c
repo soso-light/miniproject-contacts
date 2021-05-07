@@ -1,7 +1,7 @@
 #include "manager.h"
 
 void listContact(Contact *p, int count){
-	printf("\nNo number\t\tName\n");
+	printf("\nNo Name : Number\n");
 	printf("=================================================\n");
 	for(int i =0; i <count ; i++){
 		if(p[i].number == -1) continue;
