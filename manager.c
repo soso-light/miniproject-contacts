@@ -1,4 +1,4 @@
-#include "maneger.h"
+#include "manager.h"
 
 void listContact(Contact *p, int count);
 int selectDataNumber(Contact *p, int count);
