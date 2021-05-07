@@ -1,7 +1,30 @@
 #include "contact.h"
 
+
+int createContact(Contact *p){
+	print("이름은? ");
+	scanf("%s",p->name);
+	print("번호는? (- 입력하지 마시오)");
+	scanf("%s",p->number);
+	return 1;
+}
+
 void readContact(Contact p){
     printf("%s : %d\n", p.name, p.number);
+}
+
+int updateContact(Contact *p){
+	print("이름은? ");
+	scanf("%s",p->name);
+	print("번호는? ");
+	scanf("%s",p->number);
+	printf("=> 수정됨!\n");
+	return 1;
+}
+
+int deleteContact(Contact *p){
+	p->number = -1;
+	return 1;
 }
 
 int selectMenu(){
@@ -18,6 +41,25 @@ int selectMenu(){
 	printf("=> 원하는 메뉴는? ");
 	scanf("%d", &menu);
 	return menu;
+}
+
+void searchName(Contact *p, int count){
+	int scnt = 0;
+	int search[20];
+
+	printf("검색할 이름? ");
+	scanf("%s", search);
+	printf("****************************\n");
+	for(int i =0; i <count ; i++){
+		if(p[i].number == -1) continue;
+		if(strstr(p[i].name, search)){
+			printf("%2d ", i+1);
+			readContact(p[i]);
+			scnt++;
+		}
+	}
+	if(scnt == 0) printf("=> 검색된 데이터 없음!");
+	printf("\n");
 }
 
 void searchNumber(Contact*p, int count){
