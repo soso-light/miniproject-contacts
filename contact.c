@@ -5,6 +5,7 @@ void readContact(Contact p){
 }
 
 int selectMenu(){
+    int menu;
 	printf("\n*** 점수계산기 ***\n");
 	printf("1. 연락처 조회\n");
 	printf("2. 연락처 추가\n");
@@ -21,7 +22,6 @@ int selectMenu(){
 
 void searchNumber(Contact*p, int count){
     int scnt = 0;
-	int min=0, max=0;
 	int search;
 	printf("검색할 번호? ");
 	scanf("%d", &search);
@@ -30,7 +30,7 @@ void searchNumber(Contact*p, int count){
 		if(p[i].number == -1) continue;
 		if(p[i].number == search){
 			printf("%2d ", i+1);
-			readProduct(p[i]);
+			readContact(p[i]);
 			scnt++;
 		}
 	}
