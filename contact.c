@@ -20,5 +20,20 @@ int selectMenu(){
 }
 
 void searchNumber(Contact*p, int count){
-    
+    int scnt = 0;
+	int min=0, max=0;
+	int search;
+	printf("검색할 번호? ");
+	scanf("%d", &search);
+	printf("****************************\n");
+	for(int i =0; i <count ; i++){
+		if(p[i].number == -1) continue;
+		if(p[i].number == search){
+			printf("%2d ", i+1);
+			readProduct(p[i]);
+			scnt++;
+		}
+	}
+	if(scnt == 0) printf("=> 검색된 데이터 없음!");
+	printf("\n");
 }
