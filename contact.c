@@ -1,3 +1,5 @@
+#include "contact.h"
+
 void readContact(Contact p);
 void listContact(Contact *p, int count);
 int selectMenu();
