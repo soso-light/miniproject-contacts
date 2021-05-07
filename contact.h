@@ -12,8 +12,8 @@ typedef struct{
 
 int createContact(Contact *p);
 void readContact(Contact p);
-int updateContact(Contact p);
-int deleteContact(Contact p);
+int updateContact(Contact *p);
+int deleteContact(Contact *p);
 int selectMenu();
 void searchName(Contact *p, int count);
 void searchNumber(Contact*p, int count);
