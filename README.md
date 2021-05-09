@@ -22,11 +22,12 @@ Group 11
  - 함수 readContact, listContact, selectMenu, saveContactData, loadContactData, searchNumber 구현
  - main.c 기본 골자 제공
  - Makefile  제작
- - 자신이 해당하는 역할 md file에 작성
+ - 실행 화면 스크린샷
+ - 자신이 해당하는 역할, 함수의 기능 md file에 작성
 
 
 20학번 조다빈
  - team peoject repo 제작
  - struct 요소 정의
- - wiki file 1차 작성
+ - wiki file 작성
  - 구조체 정의, 함수 createContact, updateContact, deleteContact, selectDataNumber, searchName 구현
