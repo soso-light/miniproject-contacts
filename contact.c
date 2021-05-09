@@ -5,7 +5,9 @@ int createContact(Contact *p){
 	printf("이름은? ");
 	scanf("%s",p->name);
 	printf("번호는(- 입력하지 마시오)? ");
-	scanf("%s",&p->number);
+	scanf("%s",p->number);
+    //printf("%s : %s\n", p->name, p->number);
+	p->del = 0;
 	return 1;
 }
 
@@ -17,7 +19,7 @@ int updateContact(Contact *p){
 	printf("이름은? ");
 	scanf("%s",p->name);
 	printf("번호는? ");
-	scanf("%s",&p->number);
+	scanf("%s",p->number);
 	printf("=> 수정됨!\n");
 	return 1;
 }
@@ -51,7 +53,7 @@ void searchName(Contact *p, int count){
 	scanf("%s", search);
 	printf("****************************\n");
 	for(int i =0; i <count ; i++){
-		if(p[i].number == "@") continue;
+		if(p[i].del == -1) continue;
 		if(strstr(p[i].name, search)){
 			printf("%2d ", i+1);
 			readContact(p[i]);
@@ -64,12 +66,12 @@ void searchName(Contact *p, int count){
 
 void searchNumber(Contact*p, int count){
     int scnt = 0;
-	int search;
+	char search[12];
 	printf("검색할 번호? ");
-	scanf("%s", &search);
+	scanf("%s", search);
 	printf("****************************\n");
 	for(int i =0; i <count ; i++){
-		if(p[i].number == "\0") continue;
+		if(p[i].del == -1) continue;
 		if(strstr(p[i].number, search)){
 			printf("%2d ", i+1);
 			readContact(p[i]);

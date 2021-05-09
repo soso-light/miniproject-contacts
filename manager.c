@@ -4,7 +4,7 @@ void listContact(Contact *p, int count){
 	printf("\nNo Name : Number\n");
 	printf("=================================================\n");
 	for(int i =0; i <count ; i++){
-		if(p[i].number == -1) continue;
+		if(p[i].del == -1) continue;
 		printf("%2d ", i+1);
 		readContact(p[i]);
 	}
@@ -23,7 +23,7 @@ void saveContactData(Contact *p, int count){
 	FILE *fp;
 	fp = fopen("contact.txt", "wt");
 	for(int i = 0; i < count; i++){
-		if(p[i].number == -1) continue;
+		if(p[i].del == -1) continue;
 		fprintf(fp, "%s %s\n", p[i].name, p[i].number);
 	}
 	fclose(fp);
@@ -42,7 +42,7 @@ int loadContactData(Contact *p){
 	for(; i < 100; i++){
 		fscanf(fp, "%s", p[i].name);
 		if(feof(fp)) break;
-		fscanf(fp, "%s", &p[i].number);
+		fscanf(fp, "%s", p[i].number);
 	}
 	fclose(fp);
 	printf("=> 로딩 성공!\n");
