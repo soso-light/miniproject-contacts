@@ -24,10 +24,11 @@ Group 11
  - Makefile  제작
  - 실행 화면 스크린샷
  - 자신이 해당하는 역할, 함수의 기능 md file에 작성
+ - 오류 수정
 
 
 20학번 조다빈
  - team peoject repo 제작
  - struct 요소 정의
- - wiki file 작성
+ - 모든 wiki file 작성
  - 구조체 정의, 함수 createContact, updateContact, deleteContact, selectDataNumber, searchName 구현
